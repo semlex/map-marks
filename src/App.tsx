@@ -13,7 +13,7 @@ import {
 
 function App() {
   return (
-      <Router>
+      <Router basename={'/map-marks'}>
           <Navigation />
           <ScrollToTop>
               <Routes>
