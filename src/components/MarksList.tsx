@@ -62,10 +62,24 @@ const InfoText = styled.p`
   margin: 8px 0;
 `
 
+const NoMarks = styled.div`
+  width: 100%;
+  height: calc(100vh - 300px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const NoMarksText = styled.div`
+  font-size: 23px;
+  color: #6C6C6CFF;
+`
+
 const MarksList: FC = observer(() => {
     return (
         <Container>
-            {marks.marksList.map((mark) => (
+            {marks.marksList.length > 0 &&
+            marks.marksList.map((mark) => (
                 <Mark key={mark.id}>
                     <ButtonWrapper>
                         <Button onClick={() => marks.removeMark(mark.id)}>
@@ -103,6 +117,13 @@ const MarksList: FC = observer(() => {
                     </Info>
                 </Mark>
             ))}
+            {marks.marksList.length === 0 &&
+            <NoMarks>
+               <NoMarksText>
+                  Точек нет.
+               </NoMarksText>
+            </NoMarks>
+            }
         </Container>
     )
 })
