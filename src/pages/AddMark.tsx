@@ -45,7 +45,7 @@ const Label = styled.label`
 `
 
 const Map = styled(MapContainer)`
-    max-height: calc(100vh - 350px);
+    max-height: calc(100vh - 380px);
 `
 
 const ButtonWrapper = styled.div`
