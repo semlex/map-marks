@@ -156,7 +156,9 @@ const AddMark: FC = () => {
                     </Button>
                 </ButtonWrapper>
             </Form>
-            <ToastContainer />
+            <ToastContainer
+                autoClose={2200}
+            />
         </Container>
     )
 }

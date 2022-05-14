@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import MarksList from '../components/MarksList'
 import { FC } from 'react'
-import { ToastContainer, toast } from 'react-toastify'
 
 const Container = styled.div`
   max-width: 800px;
